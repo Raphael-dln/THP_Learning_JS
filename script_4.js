@@ -19,13 +19,20 @@ const entrepreneurs = [
   { first: 'Peter', last: 'Thiel', year: 1967 }
 ];
 
-
+// ////////////////////////////////////////////////////
+// Question 1
+// ////////////////////////////////////////////////////
 console.log("Filtre dans cette liste les entrepreneurs qui sont nés dans les années 70") ;
+array1 = []
 for(let n in entrepreneurs) {
   if (entrepreneurs[n].year > 1969 && entrepreneurs[n].year < 1980){
-    console.log(entrepreneurs[n]);
+    array1.push(entrepreneurs[n]);
 }}
+console.log(array1)
 
+// ////////////////////////////////////////////////////
+// Question 2
+// ////////////////////////////////////////////////////
 console.log("Sors une array qui contient le prénom et le nom des entrepreneurs");
 let array = []
 entrepreneurs.forEach(entrepreneur  => {
@@ -33,12 +40,17 @@ entrepreneurs.forEach(entrepreneur  => {
 });
 console.log(array)
 
-
+// ////////////////////////////////////////////////////
+// Question 3
+// ////////////////////////////////////////////////////
 console.log("Quel âge aurait chaque inventeur aujourd'hui ?");
 for(let n in entrepreneurs) {
   console.log(` ${entrepreneurs[n].first} ${entrepreneurs[n].last} a aujourd'hui ${2020 - entrepreneurs[n].year} ans.`);
 };
 
+// ////////////////////////////////////////////////////
+// Question 4
+// ////////////////////////////////////////////////////
 console.log("Trie les entrepreneurs par ordre alphabétique du nom de famille");
 function compare(a, b) {
   const nameA = a.last.toUpperCase();

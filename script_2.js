@@ -14,3 +14,4 @@ else {
   }
 }
 console.log (`La factorielle de ${chooseNumber} est ${n}.`);
+
