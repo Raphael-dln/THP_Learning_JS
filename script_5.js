@@ -18,7 +18,7 @@ const books = [
 // ////////////////////////////////////////////////////
 console.log("Est-ce que tous les livres ont été au moins empruntés une fois ?");
 
-array = []
+let array = []
 books.forEach( book => {
   array.push(`${book.rented}`)
 })
@@ -28,10 +28,10 @@ function isRented(element) {
 }
 
 if (array.every(isRented)){
-  console.log("Tous les livres ont été loués");
+  console.log("=> Tous les livres ont été loués");
 }
 else {
-  console.log("Ils n'ont pas tous été empruntés");
+  console.log("=> Ils n'ont pas tous été empruntés");
 }
 
 // ////////////////////////////////////////////////////
@@ -53,7 +53,7 @@ function compare(a, b) {
 }
 
 newBooks = books.sort(compare)
-console.log(`${newBooks[newBooks.length-1].title} est le livre le plus emprunté`);
+console.log(`=> ${newBooks[newBooks.length-1].title} est le livre le plus emprunté`);
 
 
 
@@ -62,7 +62,7 @@ console.log(`${newBooks[newBooks.length-1].title} est le livre le plus emprunté
 // Question 3
 // ////////////////////////////////////////////////////
 console.log("Quel est le livre le moins emprunté ?");
-function compare(a, b) {
+function compare1(a, b) {
   const rentA = a.rented;
   const rentB = b.rented;
 
@@ -74,8 +74,8 @@ function compare(a, b) {
   }
   return comparison;
 }
-newBooks = books.sort(compare)
-console.log(`${newBooks[0].title} est le livre le moins emprunté`);
+newBooks = books.sort(compare1)
+console.log(`=> ${newBooks[0].title} est le livre le moins emprunté`);
 
 // ////////////////////////////////////////////////////
 //Question 4
@@ -83,23 +83,26 @@ console.log(`${newBooks[0].title} est le livre le moins emprunté`);
 
 console.log("Trouve le livre avec l'ID: 873495 ;");
 
+
 for(let n in books) {
   if (books[n].id === 873495){
-    console.log(`Le livre ${books[n].title} a l'ID n° 873495`);
+    console.log(`=> Le livre ${books[n].title} a l'ID n° 873495`);
   };
+  
 }
-
 
 // ////////////////////////////////////////////////////
 //Question 5
 // ////////////////////////////////////////////////////
+
 console.log("Supprime le livre avec l'ID: 133712 ;");
 for(let n in books) {
   if (books[n].id === 133712){
     delete books[n];
   };
 }
-console.log("le livre avec l'ID 133712 a été supprimé");
+console.log("=> Le livre avec l'ID 133712 a été supprimé");
+
 console.log(books);
 
 // ////////////////////////////////////////////////////
@@ -107,7 +110,7 @@ console.log(books);
 // ////////////////////////////////////////////////////
 console.log("Trie les livres par ordre alphabétique (sans celui avec l'ID 133712 car il est supprimé).");
 
-function compare(a, b) {
+function compare2(a, b) {
   const nameA = a.title.toUpperCase();
   const nameB = b.title.toUpperCase();
 
@@ -119,6 +122,6 @@ function compare(a, b) {
   }
   return comparison;
 }
-console.log(books.sort(compare));
+console.log(books.sort(compare2));
 
 

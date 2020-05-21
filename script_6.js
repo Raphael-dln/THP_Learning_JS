@@ -2,7 +2,7 @@ let arn = ""
 function protein(arn){
   let arrayArn = [];
   arrayArn = arn.match(/.{1,3}/g);
-  arrayProtein = []
+  let arrayProtein = []
   arrayArn.forEach(n => {
     if ((n === "UCU") || (n === "UCC") || (n === "UCA") || (n === "UCG") || (n === "AGU") || (n === "AGC")){
       arrayProtein.push("Sérine");
