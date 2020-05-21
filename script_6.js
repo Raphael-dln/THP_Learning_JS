@@ -18,7 +18,7 @@ function protein(arn){
       arrayProtein.push("Tyrosine");
     }
   })
-console.log(arrayProtein)
+console.log(arrayProtein.join('-'));
 }
 
 console.log(" ARN CCGUCGUUGCGCUACAGC donne les protéines suivantes :");
